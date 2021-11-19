@@ -29,5 +29,10 @@ namespace Who
                 return haircut;
             }
         }
+
+        public override string ToString()
+        {
+            return base.ToString()+" "+number+" "+haircut;
+        }
     }
 }

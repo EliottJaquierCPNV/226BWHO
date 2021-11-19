@@ -36,5 +36,10 @@ namespace Who
                 return birthdate;
             }
         }
+
+        public override string ToString()
+        {
+            return firstname+" "+name+" "+birthdate+"";
+        }
     }
 }
