@@ -34,5 +34,10 @@ namespace Who
         {
             return base.ToString()+" "+number+" "+haircut;
         }
+
+        public override string Walk()
+        {
+            return firstname + " walking faster.";
+        }
     }
 }

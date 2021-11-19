@@ -27,5 +27,20 @@ namespace TestWho
             Assert.AreEqual(expected_name, person.Name);
             Assert.AreEqual(expected_birthdate, person.Birthdate);
         }
+        [Test]
+        public void Walk_NominalCace_Success()
+        {
+            //given
+            string expected_firstname = "Eliott";
+            string expected_name = "Jaquier";
+            DateTime expected_birthdate = new DateTime(2004, 2, 25);
+            string expected_walk = expected_firstname + " walking.";
+
+            //when
+            Person person = new Person(expected_firstname, expected_name, expected_birthdate);
+
+            //then
+            Assert.AreEqual(expected_walk, person.Walk());
+        }
     }
 }

@@ -5,7 +5,7 @@ namespace Who
     public class Person
     {
         private string name;
-        private string firstname;
+        protected string firstname;
         private DateTime birthdate;
 
         public Person(string firstname,string name, DateTime birthdate)
@@ -40,6 +40,11 @@ namespace Who
         public override string ToString()
         {
             return firstname+" "+name+" "+birthdate+"";
+        }
+
+        public virtual string Walk()
+        {
+            return firstname + " walking.";
         }
     }
 }

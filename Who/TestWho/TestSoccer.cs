@@ -34,5 +34,25 @@ namespace TestWho
             Assert.AreEqual(expected_haircut, soccer.Haircut);
             Assert.AreEqual(expected_number, soccer.Number);
         }
+        [Test]
+        public void Walk_NominalCace_Success()
+        {
+            //given
+            string expected_firstname = "Eliott";
+            string expected_name = "Jaquier";
+            DateTime expected_birthdate = new DateTime(2004, 2, 25);
+            int expected_number = 10;
+            string expected_haircut = "Muck";
+            string expected_walk = expected_firstname + " walking faster.";
+            
+            Soccer soccer = new Soccer(expected_firstname, expected_name, expected_birthdate, expected_number, expected_haircut);
+            string walkResult;
+
+            //when
+            walkResult = soccer.Walk();
+
+            //then
+            Assert.AreEqual(expected_walk, walkResult);
+        }
     }
 }
